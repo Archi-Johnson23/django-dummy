@@ -1,17 +1,7 @@
 from django.contrib import admin
-from polls.models import Question
+
+from polls.models import Books
+
+admin.site.register(Books)
 
 
-class QuestionAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['question_text']}),
-        ('Date information', {'fields': ['pub_date']}),
-    ]
-
-admin.site.register(Question, QuestionAdmin)
-
-
-from django.contrib import admin
-from polls.models import Choice, Question
-# ...
-admin.site.register(Choice)
