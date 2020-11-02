@@ -10,10 +10,10 @@ class Books(models.Model):
         null=False
     )
 
-    book_photo = models.ImageField(
-        'Фото обложки',
-        upload_to='/media/'
-    )
+    # book_photo = models.ImageField(
+    #     'Фото обложки',
+    #     upload_to='/media/'
+    # )
 
 
     price = models.DecimalField(
@@ -63,63 +63,63 @@ class Books(models.Model):
     )
 
 
-    dat_publich = models.DateField(
-        'Год издания',
-        blank=False,
-        null=False
-    )
+    # dat_publich = models.DateField(
+    #     'Год издания',
+    #     blank=False,
+    #     null=False
+    # )
 
-    weight = models.DecimalField(
-        'Вес(гр)',
-        default='100гр',
-        max_length=200,
-        blank=False,
-        null=False
-    )
-    pages = models.DecimalField(
-        'Страниц',
-        max_length=200,
-        blank=False,
-        null=False
-    )
+    # weight = models.DecimalField(
+    #     'Вес(гр)',
+    #     default='100гр',
+    #     max_length=200,
+    #     blank=False,
+    #     null=False
+    # )
+    # pages = models.DecimalField(
+    #     'Страниц',
+    #     max_length=200,
+    #     blank=False,
+    #     null=False
+    # )
 
-    age_ogranich = models.DecimalField(
-        'Возрастные ограничения',
-         default='+18',
-        max_length=200,
-        blank=False,
-        null=False
-    )
+    # age_ogranich = models.DecimalField(
+    #     'Возрастные ограничения',
+    #     default='+18',
+    #     max_length=200,
+    #     blank=False,
+    #     null=False
+    # )
 
-    col_books = models.DecimalField(
-        'Количество книг в наличии',
-        max_length=200,
-        blank=False,
-        null=False
-    )
-
-
-
-    publisher = models.CharField(
-        'Издательство ',
-        default='',
-        max_length=200,
-        blank=False,
-        null=False
-    )
+    # col_books = models.DecimalField(
+    #     'Количество книг в наличии',
+    #     max_length=200,
+    #     blank=False,
+    #     null=False
+    # )
 
 
-    data_catalog = models.DateField(
-        'Дата внесения в каталог',
-        blank=False,
-        null=False
-    )
 
-    data_carta = models.DateField(
-        'Дата последнего изменения карточки',
-        blank=False,
-        null=False
-    )
+    # publisher = models.CharField(
+    #     'Издательство ',
+    #     default='',
+    #     max_length=200,
+    #     blank=False,
+    #     null=False
+    # )
+
+
+    # data_catalog = models.DateField(
+    #     'Дата внесения в каталог',
+    #     blank=False,
+    #     null=False
+    # )
+
+    # data_carta = models.DateField(
+    #     'Дата последнего изменения карточки',
+    #     blank=False,
+    #     null=False
+    # )
 
     def __str__(self):
         return self.choice_text
